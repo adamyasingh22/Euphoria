@@ -25,11 +25,21 @@ const newArrivals = [
 ];
 
 const NewArrivalsContainer = styled.div`
-  width: 100%;
+  width: 90%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  margin-top: -40px;
+`;
+const HeadingContainer = styled.div`
+  display: flex;
+  alignitems: center;
+  height: 50px;
+  justifycontent: center;
+  padding: 20px;
+  gap: 10px;
+  margin-bottom: 20px;
 `;
 
 const ArrivalHeading = styled.h1`
@@ -37,7 +47,16 @@ const ArrivalHeading = styled.h1`
   font-weight: bold;
   text-align: left;
   color: #000;
-  margin-bottom: 40px;
+`;
+const Pointer = styled.div`
+  width: 8px;
+  height: 30px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to bottom,
+    #a855f7,
+    #7c3aed
+  ); /* violet gradient */
 `;
 
 const ArrivalsGrid = styled.div`
@@ -45,11 +64,13 @@ const ArrivalsGrid = styled.div`
   gap: 20px;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 `;
 
 const ArrivalCard = styled.div`
   width: 300px;
   text-align: center;
+  padding: 10px;
 `;
 
 const ArrivalImage = styled.img`
@@ -62,6 +83,7 @@ const ArrivalTitle = styled.p`
   margin-top: 10px;
   font-size: 14px;
   color: #333;
+  font-weight: bold;
 `;
 
 const ArrowButton = styled.button`
@@ -77,7 +99,10 @@ const ArrowButton = styled.button`
 const NewArrivals = () => {
   return (
     <NewArrivalsContainer>
-      <ArrivalHeading>🆕 New Arrivals</ArrivalHeading>
+      <HeadingContainer>
+        <Pointer />
+        <ArrivalHeading> New Arrivals</ArrivalHeading>
+      </HeadingContainer>
       <ArrivalsGrid>
         <ArrowButton>{'←'}</ArrowButton>
         {newArrivals.map((item) => (
