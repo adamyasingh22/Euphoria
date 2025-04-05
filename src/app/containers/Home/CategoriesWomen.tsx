@@ -1,52 +1,28 @@
 'use client';
 import styled from 'styled-components';
 
-const categoriesMen = [
+const categoriesWomen = [
   {
     id: 1,
-    src: 'https://img.freepik.com/free-photo/man-beige-shirt-pants-casual-wear-fashion_53876-102889.jpg?t=st=1743853170~exp=1743856770~hmac=925457577c432624da0f10bf482320e33f32490ac0cfb3a09ee85d9f28c570fb&w=740',
-    title: 'Shirts',
-    alt: 'Knitted Joggers',
-  },
-  {
-    id: 2,
-    src: 'https://img.freepik.com/free-photo/skater-boy-posing-with-skateboard_23-2147670748.jpg?t=st=1743853266~exp=1743856866~hmac=c4ccebbd7f80ecea0b4529aa82fa513b97fbad9d740a4b0811051b5bb82cc5f6&w=740',
-    title: 'Printed Shirts',
-    alt: 'Full Sleeve',
-  },
-  {
-    id: 3,
-    src: 'https://img.freepik.com/free-photo/attractive-man-heading-work_23-2147932472.jpg?t=st=1743853516~exp=1743857116~hmac=2105a425abc25bce5c621dc848a459dbb84b2eea6d488c8cc1def514e10a7a0c&w=740',
-    title: 'Polo T-Shirts',
-    alt: 'Active T-Shirts',
-  },
-  {
-    id: 4,
-    src: 'https://img.freepik.com/free-photo/smiling-man-posing-with-longboard_23-2147646475.jpg?t=st=1743853459~exp=1743857059~hmac=307456a842fab4a929aacc3a67a042fc177c0efcc4f64c5f8d54429693489d58&w=740',
-    title: 'Polo T-Shirts',
-    alt: 'Urban Shirts',
-  },
-  {
-    id: 5,
-    src: 'https://img.freepik.com/free-photo/stretching_23-2148023820.jpg?t=st=1743854130~exp=1743857730~hmac=9a0cf4993c22c17c6862d13266ff0d48dc6164ea448df4f92a2ac2da3e321f27&w=740',
+    src: 'https://img.freepik.com/free-photo/young-person-wearing-hoodie-mockup_23-2149246201.jpg?t=st=1743864198~exp=1743867798~hmac=6a8125926bd60405f3861809774dfa0654476a45a58eb8cb34728b622ba276b8&w=740',
     title: 'Hoodies & Sweatshirts',
     alt: 'Knitted Joggers',
   },
   {
-    id: 6,
-    src: 'https://img.freepik.com/free-photo/young-teenage-boy-wearing-denim-outfit_23-2150151061.jpg?t=st=1743854191~exp=1743857791~hmac=cfc8037049ba5d9ad143f473551b5f1bb5db94288ef6b4de4f2a6dde7e2e3e75&w=740',
-    title: 'Jeans',
+    id: 2,
+    src: 'https://img.freepik.com/free-photo/young-businesswoman-jacket-standing-posing-gray-wall_114579-81649.jpg?t=st=1743864154~exp=1743867754~hmac=3af8ca65617574676f4a0163b877febce2a9afa05abcf9c680a731ad14f9dc66&w=740',
+    title: 'Coats & Parkas',
     alt: 'Full Sleeve',
   },
   {
-    id: 7,
-    src: 'https://img.freepik.com/free-photo/fit-adult-man-exercising-outdoors_23-2148531081.jpg?t=st=1743854227~exp=1743857827~hmac=f454e7a92e44ac929d13bcbf9e6976db53d0de3fae7a1abda59f6f7f98787012&w=740',
-    title: 'Activewears',
+    id: 3,
+    src: 'https://img.freepik.com/free-photo/woman-holding-skateboard-back_23-2148259460.jpg?t=st=1743864097~exp=1743867697~hmac=97d1200c997fc46ce05c80da8ed4e1c5d1e1faac462b150dabd3f4ca6d3207f6&w=740',
+    title: 'Tees & T-Shirts',
     alt: 'Active T-Shirts',
   },
   {
-    id: 8,
-    src: 'https://img.freepik.com/free-photo/man-posing-with-boxing-gloves-full-shot_23-2149036360.jpg?t=st=1743854289~exp=1743857889~hmac=031dcc0a0d44940c3ad24450ff89700bf1e7faaffc47bef9735c3f914384abce&w=740',
+    id: 4,
+    src: 'https://img.freepik.com/free-photo/young-female-practicing-kickboxing_23-2149127349.jpg?t=st=1743864042~exp=1743867642~hmac=635f42713a089b24b9af11df8852c2e85b14c7d9f5152d66420e3a9a2aabf929&w=740',
     title: 'Boxers',
     alt: 'Urban Shirts',
   },
@@ -58,7 +34,6 @@ const CategoriesContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  margin-top: -40px;
 `;
 const HeadingContainer = styled.div`
   display: flex;
@@ -143,15 +118,15 @@ const ArrowButton = styled.button`
   }
 `;
 
-const CategoriesMen = () => {
+const CategoriesWomen = () => {
   return (
     <CategoriesContainer>
       <HeadingContainer>
         <Pointer />
-        <ArrivalHeading>Categories For Men</ArrivalHeading>
+        <ArrivalHeading>Categories For Women</ArrivalHeading>
       </HeadingContainer>
       <SlideContainer>
-        {categoriesMen.map((category) => (
+        {categoriesWomen.map((category) => (
           <ArrivalCard key={category.id}>
             <ArrivalImage src={category.src} alt={category.alt} />
             <ArrivalTitleContainer>
@@ -169,4 +144,4 @@ const CategoriesMen = () => {
     </CategoriesContainer>
   );
 };
-export default CategoriesMen;
+export default CategoriesWomen;

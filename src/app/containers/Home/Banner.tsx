@@ -24,8 +24,7 @@ const BannerContainer = styled.div`
 `;
 
 const BannerSlide = styled.div`
-  width: 1300px;
-  height: 450px;
+  max-width: 100%;
   border-radius: 15px;
   overflow: hidden;
   display: flex;

@@ -30,7 +30,7 @@ const SliderWrapper = styled.div<{ index: number }>`
 `;
 const Slide = styled.div`
   min-width: 100%;
-  height: 550px;
+
   display: flex;
   justify-content: center;
   align-items: center;

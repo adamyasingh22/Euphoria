@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const images = [
   {
     id: 1,
-    src: 'https://img.freepik.com/free-photo/girl-yellow-wall-with-shopping-bags_1157-34353.jpg?t=st=1743660550~exp=1743664150~hmac=78217bc3d72f2bafd3c599a0ba0f378c2f4dc257bc6d9ba6810dc20994c1ce29&w=1380',
+    src: 'https://img.freepik.com/free-photo/happy-curly-haired-lady-with-cool-makeup-striped-stylish-clothes-showing-peace-sign-smiling-with-closed-eyes-pink-wall_197531-23502.jpg?t=st=1743864329~exp=1743867929~hmac=285b5ddcd3145f318f3ecadbef13cef32a66f93b3dba35c8982a36a39b16c52f&w=1380',
     alt: 'Image 1',
     subtitle: 'Low Price',
     title: 'High Coziness',
@@ -12,7 +12,7 @@ const images = [
   },
   {
     id: 2,
-    src: 'https://img.freepik.com/free-photo/girl-yellow-wall-with-shopping-bags_1157-34348.jpg?t=st=1743660589~exp=1743664189~hmac=b48ff2096a658ba4531c1788f7fb844e0ea1107b726abbb290ef6efaa7c59829&w=1380',
+    src: 'https://img.freepik.com/free-photo/young-girl-sport-outfits-staying-calm_114579-22010.jpg?t=st=1743864270~exp=1743867870~hmac=d55f42e4571038c8129ae71bfe426c899c8765575de0ed23fc1388421093846b&w=1380',
     alt: 'Image 2',
     subtitle: 'Beyoung Presents',
     title: 'Breezy Summer Styles',
@@ -27,13 +27,12 @@ const DealsContainer = styled.div`
   justify-content: center;
   padding: 20px;
   gap: 20px;
-  width: 100%;
+  width: 88%;
   margin: 40px auto;
 `;
 
 const DealsSlide = styled.div`
-  width: 1300px;
-  height: 450px;
+  width: 100%;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
