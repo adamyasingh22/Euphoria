@@ -6,17 +6,19 @@ import Banner from './containers/Home/Banner';
 import CategoriesMen from './containers/Home/CategoriesMen';
 import CategoriesWomen from './containers/Home/CategoriesWomen';
 import LimeLightDeals from './containers/Home/LimeLightDeals';
+import BrandDeals from './containers/Home/BrandDeals';
 
 export default function Home() {
   return (
     <div>
       <Carousel />
-      <Deals />\
+      <Deals />
       <NewArrivals />
       <Banner />
       <CategoriesMen />
       <CategoriesWomen />
       <LimeLightDeals />
+      <BrandDeals />
     </div>
   );
 }

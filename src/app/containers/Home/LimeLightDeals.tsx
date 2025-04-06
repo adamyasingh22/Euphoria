@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 
 interface FavoriteButtonProps {
-  liked: boolean;
+  $liked: boolean;
 }
 
 const categoriesWomen = [
@@ -153,8 +153,8 @@ const FavoriteButton = styled.button<FavoriteButtonProps>`
   svg {
     width: 20px;
     height: 20px;
-    fill: ${({ liked }) => (liked ? 'red' : 'none')};
-    stroke: ${({ liked }) => (liked ? 'red' : '#374151')};
+    fill: ${({ $liked }) => ($liked ? 'red' : 'none')};
+    stroke: ${({ $liked }) => ($liked ? 'red' : '#374151')};
     stroke-width: 2;
     transition: fill 0.2s, stroke 0.2s;
   }
@@ -172,7 +172,7 @@ const LimeLightDeals = () => {
         {categoriesWomen.map((category) => (
           <ArrivalCard key={category.id}>
             <ArrivalImage src={category.src} alt={category.alt} />
-            <FavoriteButton onClick={() => setLiked(!liked)} liked={liked}>
+            <FavoriteButton onClick={() => setLiked(!liked)} $liked={liked}>
               <svg viewBox="0 0 24 24">
                 <path
                   d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 
