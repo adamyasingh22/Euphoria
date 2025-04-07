@@ -7,6 +7,7 @@ import CategoriesMen from './containers/Home/CategoriesMen';
 import CategoriesWomen from './containers/Home/CategoriesWomen';
 import LimeLightDeals from './containers/Home/LimeLightDeals';
 import BrandDeals from './containers/Home/BrandDeals';
+import BigSavingDays from './containers/Home/BigSavingDays';
 
 export default function Home() {
   return (
@@ -14,11 +15,12 @@ export default function Home() {
       <Carousel />
       <Deals />
       <NewArrivals />
+      <BigSavingDays />
       <Banner />
       <CategoriesMen />
       <CategoriesWomen />
-      <LimeLightDeals />
       <BrandDeals />
+      <LimeLightDeals />
     </div>
   );
 }
