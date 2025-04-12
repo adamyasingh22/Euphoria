@@ -9,13 +9,13 @@ interface CardProps {
 }
 
 const Wrapper = styled.div`
-  width: 20%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   padding: 20px;
-  margin-left: 5%;
+  margin-left: 10%;
 `;
 const Header = styled.div`
   width: 100%;
