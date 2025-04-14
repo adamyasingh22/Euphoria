@@ -54,7 +54,7 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: 600;
 `;
 
