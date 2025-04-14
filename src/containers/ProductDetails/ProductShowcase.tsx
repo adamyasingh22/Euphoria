@@ -97,20 +97,26 @@ const SizeSelector = styled.div`
 
 const ColorSelector = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 20px;
+  flex-direction: column;
 
   div {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid transparent;
+    display: flex;
+    gap: 20px;
+    margin-top: 1%;
+  }
+`;
+const ColorFrame = styled.div`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
 
-    &.active {
-      border-color: #000;
-    }
+  &.active {
+    border-color: #000;
   }
 `;
 
@@ -194,10 +200,12 @@ export default function ProductShowcase() {
 
         <ColorSelector>
           <strong>Colours Available:</strong>
-          <div style={{ background: '#000' }} className="active" />
-          <div style={{ background: '#fbbf24' }} />
-          <div style={{ background: '#f43f5e' }} />
-          <div style={{ background: '#e879f9' }} />
+          <div>
+            <ColorFrame style={{ background: '#000' }} className="active" />
+            <ColorFrame style={{ background: '#fbbf24' }} />
+            <ColorFrame style={{ background: '#f43f5e' }} />
+            <ColorFrame style={{ background: '#e879f9' }} />
+          </div>
         </ColorSelector>
 
         <PriceRow>
