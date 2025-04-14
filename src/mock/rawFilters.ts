@@ -51,5 +51,43 @@ const rawFilters = {
     { id: 5, name: 'Elegant' },
     { id: 6, name: 'Formal(Evening)' },
   ],
+  combos: [
+    { id: 1, price: 1000, name: 'Pick Any 4 - Womens Plain T-shirt Combo' },
+    { id: 2, price: 900, name: 'Pick Any 4 - Plain Womens Boxer Combo' },
+    {
+      id: 3,
+      price: 2000,
+      name: 'Pick Any 4 - Women Plain Full Sleeve T-shirt Combo',
+    },
+    {
+      id: 4,
+      price: 600,
+      name: 'Multicolor Checkered Long Casual Shirts for Women',
+    },
+    {
+      id: 5,
+      price: 900,
+      name: 'Pick Any 2: Plain Boxy Casual Shirts for Women Combo',
+    },
+    { id: 6, price: 1500, name: 'Blue Floral Anarkali Kurti' },
+    {
+      id: 7,
+      price: 1000,
+      name: 'Jade Black Narrow Cut Flexible Women Jeggings',
+    },
+    {
+      id: 8,
+      price: 1060,
+      name: 'Mustard-yellow Solid Straight-Fit Women Pant',
+    },
+    { id: 9, price: 650, name: 'Women Pants Combo - Pick Any 2' },
+    {
+      id: 10,
+      price: 1200,
+      name: 'Pista Green Solid Boxy Casual Shirts for Women',
+    },
+    { id: 11, price: 1800, name: 'Plain Burgundy Womens Boxer' },
+    { id: 12, price: 500, name: 'Striped Front Tie Casual Shirts for Women' },
+  ],
 };
 export default rawFilters;

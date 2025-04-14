@@ -66,6 +66,7 @@ const DiscriptionWrapper = styled.div`
   padding: 30px;
   gap: 12px;
   margin-bottom: 30px;
+  font-family: 'Segoe UI', sans-serif;
 
   width: 100%;
 

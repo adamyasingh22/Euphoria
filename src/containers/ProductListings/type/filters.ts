@@ -21,4 +21,9 @@ export type FilterOption = {
     id: number;
     name: string;
   }[];
+  combos: {
+    id: number;
+    name: string;
+    price: number;
+  }[];
 };
