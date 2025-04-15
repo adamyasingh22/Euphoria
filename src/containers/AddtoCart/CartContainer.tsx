@@ -1,6 +1,13 @@
-'use client';
 import React, { useState } from 'react';
 import styled from 'styled-components';
+
+type CartItems = {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  shipping: number;
+};
 
 const CartWrapper = styled.div`
   width: 100%;
@@ -81,6 +88,94 @@ const RemoveBtn = styled.button`
   cursor: pointer;
 `;
 
+const TotalContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const DiscountTab = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 40px;
+  gap: 10px;
+  color: #666;
+  margin-top: 4%;
+  margin-left: 10%;
+`;
+const CouponWrapper = styled.div`
+  display: flex;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 10px;
+`;
+
+const CouponInput = styled.input`
+  flex: 1;
+  padding: 15px 15px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  border-radius: 999px 0 0 999px;
+  background: rgb(238, 234, 234);
+  color: #666;
+`;
+
+const ApplyButton = styled.button`
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 0 999px 999px 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #9333ea;
+  }
+`;
+
+const ContinueButton = styled.button`
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+
+  &:hover {
+    border-color: #999;
+  }
+`;
+const TotalTab = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 40px 40px;
+  gap: 0.8rem;
+  color: #666;
+  margin-right: 10%;
+  background: rgb(244, 241, 241);
+`;
+const ItemTotalTab = styled.div`
+  display: flex;
+  justify-content: space-between;
+  fonst-size: 1.8rem;
+  gap: 2.8rem;
+`;
+const Divider = styled.hr`
+  border: none;
+  border-top: 1px solid #444;
+  margin: 1%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+`;
+
 const cartData = [
   {
     id: 1,
@@ -139,6 +234,21 @@ export default function CartContainer() {
   const handleRemove = (id: number) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
+  const calculateSubtotal = (item: CartItems): number => {
+    return item.price * item.quantity;
+  };
+  const calculateTotal = (): number => {
+    return cartData.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  };
+  const calculateShipping = (): number => {
+    return cartData.reduce((acc, item) => acc + item.shipping, 0);
+  };
+
+  const grandTotal = (): number => {
+    return (
+      calculateTotal() + cartData.reduce((acc, item) => acc + item.shipping, 0)
+    );
+  };
 
   return (
     <CartWrapper>
@@ -183,11 +293,48 @@ export default function CartContainer() {
           <p style={{ padding: '5px' }}>
             {item.shipping === 0 ? 'FREE' : `$${item.shipping.toFixed(2)}`}
           </p>
-          <Price>${(item.price * item.quantity).toFixed(2)}</Price>
+          <Price>${calculateSubtotal(item).toFixed(2)}</Price>
 
           <RemoveBtn onClick={() => handleRemove(item.id)}>🗑️</RemoveBtn>
         </CartItem>
       ))}
+
+      <TotalContainer>
+        <DiscountTab>
+          <strong>Discount Codes</strong>
+          <small>Entre your coupon code if you have one</small>
+          <CouponWrapper>
+            <CouponInput type="text" placeholder="Enter Coupon Code" />
+            <ApplyButton>Apply</ApplyButton>
+          </CouponWrapper>
+
+          <ContinueButton>Continue Shopping</ContinueButton>
+        </DiscountTab>
+        <TotalTab>
+          <ItemTotalTab>
+            <strong>Sub Total</strong>
+            <small>${calculateTotal().toFixed(2)}</small>
+          </ItemTotalTab>
+          <ItemTotalTab>
+            <strong>Shipping</strong>
+            <small>${calculateShipping().toFixed(2)}</small>
+          </ItemTotalTab>
+          <ItemTotalTab style={{ marginTop: '20px' }}>
+            <strong>Grand Total</strong>
+            <small>${grandTotal().toFixed(2)}</small>
+          </ItemTotalTab>
+          <Divider />
+          <ContinueButton
+            style={{
+              marginTop: '10px',
+              backgroundColor: '#a855f7',
+              color: 'white',
+            }}
+          >
+            Proceed To Checkout
+          </ContinueButton>
+        </TotalTab>
+      </TotalContainer>
     </CartWrapper>
   );
 }

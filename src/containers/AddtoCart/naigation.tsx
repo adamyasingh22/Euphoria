@@ -6,8 +6,10 @@ const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 40px;
+  padding: 20px;
   gap: 10px;
+  margin-top: 1%;
+  margin-left: 2%;
 `;
 const AddressBar = styled.div`
   display: flex;
@@ -16,14 +18,14 @@ const AddressBar = styled.div`
   gap: 10px;
 `;
 const Address = styled.div`
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 550;
   color: #444;
   cursor: pointer;
 `;
 
 const AddressText = styled.p`
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: #444;
 `;
 const AlreadyLogin = styled.div`
