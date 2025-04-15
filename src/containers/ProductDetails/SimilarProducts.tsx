@@ -1,4 +1,3 @@
-'use client';
 import styled from 'styled-components';
 import DealsContainer from '../ProductListings/DealsContainer';
 

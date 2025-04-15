@@ -1,13 +1,5 @@
-import BestPrice from '@/containers/ProductListings/BestPrice';
-import CategoryDiscription from '@/containers/ProductListings/CategoryDiscription';
-import ProductList from '@/containers/ProductListings/ProductList';
+import ProductListingContainer from '@/containers/ProductListings';
 
 export default function ProductListing() {
-  return (
-    <div>
-      <ProductList />
-      <CategoryDiscription />
-      <BestPrice />
-    </div>
-  );
+  return <ProductListingContainer />;
 }

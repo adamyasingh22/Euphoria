@@ -1,4 +1,3 @@
-'use client';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -131,7 +130,7 @@ const PriceRow = styled.div`
     color: #fff;
     padding: 10px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 7px;
     cursor: pointer;
     font-weight: 500;
   }

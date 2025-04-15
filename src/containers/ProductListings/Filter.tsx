@@ -1,4 +1,3 @@
-'use client';
 import styled from 'styled-components';
 import rawFilters from '@/mock/rawFilters';
 import type { FilterOption } from './type/filters';
