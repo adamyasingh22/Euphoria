@@ -1,3 +1,4 @@
+'use client';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -18,6 +19,7 @@ const Address = styled.div`
   font-size: 1.2rem;
   font-weight: 550;
   color: #444;
+  cursor: pointer;
 `;
 
 const AddressText = styled.p`
@@ -45,7 +47,7 @@ const Navigation = () => {
       </AddressText>
       <AlreadyLogin>
         <AddressText>Already registered? </AddressText>
-        <AddressText style={{ color: '#7c3aed' }}>
+        <AddressText style={{ color: '#7c3aed', cursor: 'pointer' }}>
           Please Login Here
         </AddressText>
       </AlreadyLogin>
