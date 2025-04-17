@@ -187,7 +187,7 @@ const LoginContainer = () => {
 
         <FooterLink>
           Don’t have an account?
-          <a href="/signup">Sign up</a>
+          <a href="/Signup">Sign up</a>
         </FooterLink>
       </TextWrapper>
     </Wrapper>
